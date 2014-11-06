@@ -41,7 +41,10 @@
     "jshint-stylish": "^0.2.0"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "version-patch": "npm version patch && bower version patch",
+    "version-minor": "npm version minor && bower version minor",
+    "postpublish": "bower register approximate-number https://github.com/nfriedly/approximate-number"
   },
   "bin": {
     "approximate-number": "bin/cli.js"
