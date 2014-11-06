@@ -44,7 +44,8 @@
     "test": "grunt",
     "version-patch": "npm version patch && bower version patch",
     "version-minor": "npm version minor && bower version minor",
-    "postpublish": "bower register approximate-number https://github.com/nfriedly/approximate-number"
+    "prepublish": "npm test",
+    "postpublish": "git push --tags && bower register approximate-number git://github.com/nfriedly/approximate-number.git"
   },
   "bin": {
     "approximate-number": "bin/cli.js"

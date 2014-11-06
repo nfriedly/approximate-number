@@ -8,6 +8,7 @@ describe('approximate-number node module.', function() {
   // input => output
   var tests = {
     0: '0',
+    0.1: '0.1',
     1: '1',
     10: '10',
     999: '999',
@@ -16,6 +17,7 @@ describe('approximate-number node module.', function() {
     1234: '1,234',
     9999: '9,999',
     10000: '10k',
+    10000.1: '10k',
     10500: '11k',
     10999: '11k',
     11111: '11k',
