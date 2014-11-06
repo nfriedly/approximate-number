@@ -47,6 +47,6 @@
     "test": "grunt"
   },
   "bin": {
-    "approximate-number": "cli.js"
+    "approximate-number": "bin/cli.js"
   }
 }

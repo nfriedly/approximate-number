@@ -1,0 +1,7 @@
+.gitignore
+.jshintrc
+.travis.yml
+.yo-rc.json
+bower.json
+Gruntfile.js
+test/
