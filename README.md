@@ -20,7 +20,7 @@ Or use the browser module with: `bower install approximate-number`
 ```html
 <script src="/bower_components/approximate-number/lib/approximate-number.js"></script>
 <script>
-alert(approximate(1234567890)); // 1.2b
+alert(approximateNumber(1234567890)); // 1.2b
 </script>
 ```
 
