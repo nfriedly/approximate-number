@@ -25,14 +25,14 @@
     "number",
     "numbers",
     "stack overflow",
-    " stack exchange",
+    "stack exchange",
     "-h",
-    " format",
-    " formater",
-    " approximate",
-    " approximation",
-    " short",
-    " simple"
+    "format",
+    "formatter",
+    "approximate",
+    "approximation",
+    "short",
+    "simple"
   ],
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",

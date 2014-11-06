@@ -1,0 +1,40 @@
+{
+  "name": "approximate-number",
+  "version": "1.0.1",
+  "homepage": "https://github.com/nfriedly/approximate-number",
+  "authors": [
+    "Nathan Friedly <http://nfriedly.com/>"
+  ],
+  "description": "Converts numbers into a more human-friendly format. For example, 123456 becomes '123k'.",
+  "main": "lib/approximate-number.js",
+  "keywords": [
+    "approximate-number",
+    "human",
+    "friendly",
+    "readable",
+    "number",
+    "numbers",
+    "stack overflow",
+    "stack exchange",
+    "-h",
+    "format",
+    "formatter",
+    "approximate",
+    "approximation",
+    "short",
+    "simple"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
