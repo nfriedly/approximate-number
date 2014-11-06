@@ -1,6 +1,6 @@
 {
   "name": "approximate-number",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/approximate-number.js",
   "description": "Converts numbers into a more human-friendly format. For example, 123456 becomes '123k'.",
   "homepage": "https://github.com/nfriedly/approximate-number",
