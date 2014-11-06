@@ -14,9 +14,6 @@
     "url": "https://github.com/nfriedly/approximate-number"
   },
   "license": "MIT",
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "approximate-number",
     "human",
