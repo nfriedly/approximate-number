@@ -1,15 +1,13 @@
 {
   "name": "approximate-number",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "lib/approximate-number.js",
   "description": "Converts numbers into a more human-friendly format, similar to ls's --human-readable flag (ls -lh) or stack overflow's reputation numbers. For example, 123456 becomes '123k'. Works in Node, browsers, and on the command line.",
-  
-      "homepage": "https://github.com/nfriedly/approximate-number",
-    
-    "bugs": "https://github.com/nfriedly/approximate-number/issues",
+  "homepage": "https://github.com/nfriedly/approximate-number",
+  "bugs": "https://github.com/nfriedly/approximate-number/issues",
   "author": {
     "name": "Nathan Friedly",
-        "url": "http://nfriedly.com/" 
+    "url": "http://nfriedly.com/"
   },
   "repository": {
     "type": "git",
@@ -20,21 +18,21 @@
     "lib"
   ],
   "keywords": [
-    "approximate-number"  ,
+    "approximate-number",
     "human",
     "friendly",
     "readable",
-    "number"  ,
-    "numbers"  ,
-        "stack overflow"  ,
-        " stack exchange"  ,
+    "number",
+    "numbers",
+    "stack overflow",
+    " stack exchange",
     "-h",
-        " format"  ,
-        " formater"  ,
-        " approximate"  ,
-        " approximation"  ,
-        " short"  ,
-        " simple" 
+    " format",
+    " formater",
+    " approximate",
+    " approximation",
+    " short",
+    " simple"
   ],
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
@@ -43,13 +41,13 @@
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1",
     "grunt-mocha-cli": "^1.9.0",
-    "jshint-stylish": "^0.2.0" 
+    "jshint-stylish": "^0.2.0"
   },
   "scripts": {
-    "test": "grunt" 
-  }  ,
-      "bin": {
-        "approximate-number": "cli.js"
-    },
-    "preferGlobal": "true" 
+    "test": "grunt"
+  },
+  "bin": {
+    "approximate-number": "cli.js"
+  },
+  "preferGlobal": "true"
 }
