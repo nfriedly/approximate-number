@@ -29,7 +29,11 @@
     "approximate",
     "approximation",
     "short",
-    "simple"
+    "simple",
+    "near",
+    "nearest",
+    "closest",
+    "round"
   ],
   "devDependencies": {
     "grunt-contrib-jshint": "^0.10.0",
