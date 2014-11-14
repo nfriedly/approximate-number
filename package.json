@@ -49,7 +49,7 @@
     "version-patch": "npm version patch && bower version patch",
     "version-minor": "npm version minor && bower version minor",
     "prepublish": "npm test",
-    "postpublish": "git push --tags && bower register approximate-number git://github.com/nfriedly/approximate-number.git"
+    "postpublish": "git push --tag"
   },
   "bin": {
     "approximate-number": "bin/cli.js"
