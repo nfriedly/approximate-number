@@ -4,7 +4,7 @@ var assert = require('assert'),
     format = require('util').format,
   approximateNumber = require('../lib/approximate-number.js');
 
-describe('approximate-number node module.', function() {
+describe('approximate-number node module', function() {
   // input => output
   var tests = {
     0: '0',
@@ -38,7 +38,6 @@ describe('approximate-number node module.', function() {
   // positive number tests
   Object.keys(tests).forEach(function(input) {
     var expected = tests[input];
-
     it(format("should convert %s to %s", input, expected), function() {
       assert.equal( approximateNumber(input), expected);
     });
