@@ -51,7 +51,7 @@
     "version-patch": "npm version patch && bower version patch",
     "version-minor": "npm version minor && bower version minor",
     "prepublish": "npm test",
-    "postpublish": "git push --tag"
+    "postpublish": "git push && git push --tags"
   },
   "bin": {
     "approximate-number": "bin/cli.js"
