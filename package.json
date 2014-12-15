@@ -2,7 +2,7 @@
   "name": "approximate-number",
   "version": "1.1.1",
   "main": "lib/approximate-number.js",
-  "description": "Converts numbers into a more human-friendly format. For example, 123456 becomes '123k'.",
+  "description": "Converts large numbers into a more human-friendly format. For example, 123456 becomes '123k'.",
   "homepage": "https://github.com/nfriedly/approximate-number",
   "bugs": "https://github.com/nfriedly/approximate-number/issues",
   "author": {
@@ -19,6 +19,8 @@
     "human",
     "friendly",
     "readable",
+    "large",
+    "big",
     "number",
     "numbers",
     "stack overflow",
