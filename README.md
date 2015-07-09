@@ -1,4 +1,4 @@
-#  [![Build Status](https://secure.travis-ci.org/nfriedly/approximate-number.png?branch=master)](http://travis-ci.org/nfriedly/approximate-number)
+# Approximate Number [![Build Status](https://secure.travis-ci.org/nfriedly/approximate-number.png?branch=master)](http://travis-ci.org/nfriedly/approximate-number)
 
 Converts numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack
 Overflow's reputation numbers. For example, 123456 becomes '123k'.
