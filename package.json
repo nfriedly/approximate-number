@@ -38,7 +38,7 @@
     "round"
   ],
   "devDependencies": {
-    "grunt-cli": "^0.1.13",
+    "grunt-cli": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-watch": "^0.6.1",
