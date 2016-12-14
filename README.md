@@ -69,6 +69,7 @@ Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-
 * Changed default from rounding to truncation. Override with `options.round=true`.
 * Started abbreviating numbers between 1000 and 9999 by default. Override with `options.min10k=true`.
 * Added trillions support.
+* Dropped cli support.
 
 ## License
 
