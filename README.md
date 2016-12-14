@@ -3,19 +3,45 @@
 Converts numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack
 Overflow's reputation numbers. For example, 123456 becomes '123k'.
 
-Works in Node, browsers, and on the command line.
+Works in Node.js and in browsers.
 
+```js
+var approx = require('approximate-number');
+
+console.log(approx(1234));
+//> 1.2k
+
+console.log(approx(12345));
+//> 12k
+
+console.log(approx(1234, {decimal: false}));
+//> 1k
+
+console.log(approx(1234, {decimal: ','}));
+//> 1,2k
+
+console.log('My Stack Overflow reputation is %s.', approx(3671, {min10k: true}));
+//> My Stack Overflow reputation is 3,671.
+
+console.log('The US national debt is %s.', approx(19939034457936, {prefix: '$', capital: true, round: true}));
+// > The US national debt is $20T.
+
+```
 
 ## Getting Started
 
-Install node module with: `npm install approximate-number`
+### Node.js
+
+Install node module with: `npm install --save approximate-number`
 
 ```js
 var approx = require('approximate-number');
 approx(123456) // 123k
 ```
 
-Or use the browser module with: `bower install approximate-number`
+### Bower
+
+Install with: `bower install approximate-number`
 
 ```html
 <script src="/bower_components/approximate-number/lib/approximate-number.js"></script>
@@ -24,14 +50,25 @@ alert(approximateNumber(1234567890)); // 1.2b
 </script>
 ```
 
-Or install with `-g` for command line usage
+### Browser usage without a package manager
 
-```sh
-$ npm install -g approximate-number
-$ approximate-number 78910 #78k
-```
+Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-number/blob/master/lib/approximate-number.js) and copy it onto your site.
 
-See [tests] for more examples.
+## Options
+
+*separator* {String|Boolean} Default `','`. Thousands separator - set to a string (e.g. '.') to use that string or false to not use any separator.
+*decimal* {String|Boolean} Default = `'.'`. Decimal - set to a string (e.g. ',') to use that or set to false to avoid outputting values with a decimal.
+*round* {Boolean} Default = `false`. Round numbers off rather than flooring/truncating. When true, 105000 would become '11m', when false it becomes '10m'.
+*min10k* {Boolean} Default = `false`. Do not abbreviate numbers below 10000. E.g. 9999 would become '9,999' rather than '9k'. (Stack Overflow-style).
+*prefix* {String} Default = `''`. Optional string to prepend to the value, e.g. '$'.
+*suffix* {String} Default = `''`. Optional string to append to the value, e.g. '%'.
+
+## V2 Changes
+
+* Added optional configuration object
+* Changed default from rounding to truncation. Override with `options.round=true`.
+* Started abbreviating numbers between 1000 and 9999 by default. Override with `options.min10k=true`.
+* Added trillions support.
 
 ## License
 
