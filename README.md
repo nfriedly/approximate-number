@@ -56,12 +56,12 @@ Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-
 
 ## Options
 
-*separator* {String|Boolean} Default `','`. Thousands separator - set to a string (e.g. '.') to use that string or false to not use any separator.
-*decimal* {String|Boolean} Default = `'.'`. Decimal - set to a string (e.g. ',') to use that or set to false to avoid outputting values with a decimal.
-*round* {Boolean} Default = `false`. Round numbers off rather than flooring/truncating. When true, 105000 would become '11m', when false it becomes '10m'.
-*min10k* {Boolean} Default = `false`. Do not abbreviate numbers below 10000. E.g. 9999 would become '9,999' rather than '9k'. (Stack Overflow-style).
-*prefix* {String} Default = `''`. Optional string to prepend to the value, e.g. '$'.
-*suffix* {String} Default = `''`. Optional string to append to the value, e.g. '%'.
+* **separator** {String|Boolean} Default `','`. Thousands separator - set to a string (e.g. '.') to use that string or false to not use any separator.
+* **decimal** {String|Boolean} Default = `'.'`. Decimal - set to a string (e.g. ',') to use that or set to false to avoid outputting values with a decimal.
+* **round** {Boolean} Default = `false`. Round numbers off rather than flooring/truncating. When true, 105000 would become '11m', when false it becomes '10m'.
+* **min10k** {Boolean} Default = `false`. Do not abbreviate numbers below 10000. E.g. 9999 would become '9,999' rather than '9k'. (Stack Overflow-style).
+* **prefix** {String} Default = `''`. Optional string to prepend to the value, e.g. '$'.
+* **suffix** {String} Default = `''`. Optional string to append to the value, e.g. '%'.
 
 ## V2 Changes
 
