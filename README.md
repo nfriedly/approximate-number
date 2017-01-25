@@ -20,10 +20,16 @@ console.log(approx(1234, {decimal: false}));
 console.log(approx(1234, {decimal: ','}));
 //> 1,2k
 
-console.log('My Stack Overflow reputation is %s.', approx(3671, {min10k: true}));
+console.log('My Stack Overflow reputation is %s.', approx(3671, {
+  min10k: true
+}));
 //> My Stack Overflow reputation is 3,671.
 
-console.log('The US national debt is %s.', approx(19939034457936, {prefix: '$', capital: true, round: true}));
+console.log('The US national debt is %s.', approx(19939034457936, {
+  prefix: '$', 
+  capital: true, 
+  round: true
+}));
 // > The US national debt is $20T.
 
 ```
