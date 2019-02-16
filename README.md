@@ -68,6 +68,7 @@ Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-
 * **min10k** {Boolean} Default = `false`. Do not abbreviate numbers below 10000. E.g. 9999 would become '9,999' rather than '9k'. (Stack Overflow-style).
 * **prefix** {String} Default = `''`. Optional string to prepend to the value, e.g. '$'.
 * **suffix** {String} Default = `''`. Optional string to append to the value, e.g. '%'.
+* **capital** {Boolean} Default = `false`. Set to true to use capital letters, e.g. 3.9M instead of 3.9m
 
 ## V2 Changes
 
