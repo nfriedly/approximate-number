@@ -356,4 +356,60 @@ describe('approximate-number', function() {
       });
     });
   });
+
+  describe('options.precision > 0', function() {
+    var options = {
+      precision: 3
+    };
+
+    // input => output
+    var tests = {
+      0: '0',
+      0.1: '0.1',
+      1: '1',
+      10: '10',
+      999: '999',
+      1000: '1k',
+      1001: '1k',
+      1234: '1.23k',
+      9999: '10k',
+      10000: '10k',
+      10000.1: '10k',
+      10500: '10.5k',
+      10999: '11k',
+      11111: '11.1k',
+      111111: '111k',
+      1000000: '1m',
+      1111111: '1.11m',
+      1500000: '1.5m',
+      12345678: '12.3m',
+      1000000000: '1b',
+      1500000000: '1.5b',
+      9500000000: '9.5b',
+      9050000000: '9.05b',
+      10000000000: '10b',
+      10500000000: '10.5b',
+      1000000000000: '1t',
+      10000000000000: '10t',
+      19939034457936: '19.9t',
+      9007199254740991: '9,010t' // Number.MAX_SAFE_INTEGER, 2^53-1
+    };
+
+    // positive number tests
+    Object.keys(tests).forEach(function(input) {
+      var expected = tests[input];
+      it(format('should convert %s to %s', input, expected), function() {
+        assert.equal( approximateNumber(input, options), expected);
+      });
+    });
+
+    // negative number tests - skip 0
+    Object.keys(tests).slice(1).forEach(function(input) {
+      var expected = '-' +tests[input];
+      input = -input;
+      it(format('should convert %s to %s', input, expected), function () {
+        assert.equal(approximateNumber(input, options), expected);
+      });
+    });
+  });
 });
