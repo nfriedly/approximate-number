@@ -357,58 +357,60 @@ describe('approximate-number', function() {
     });
   });
 
-  describe('options.precision > 0', function() {
-    var options = {
-      precision: 3
-    };
-
+  describe('with options.precision', function() {
     // input => output
     var tests = {
-      0: '0',
-      0.1: '0.1',
-      1: '1',
-      10: '10',
-      999: '999',
-      1000: '1k',
-      1001: '1k',
-      1234: '1.23k',
-      9999: '10k',
-      10000: '10k',
-      10000.1: '10k',
-      10500: '10.5k',
-      10999: '11k',
-      11111: '11.1k',
-      111111: '111k',
-      1000000: '1m',
-      1111111: '1.11m',
-      1500000: '1.5m',
-      12345678: '12.3m',
-      1000000000: '1b',
-      1500000000: '1.5b',
-      9500000000: '9.5b',
-      9050000000: '9.05b',
-      10000000000: '10b',
-      10500000000: '10.5b',
-      1000000000000: '1t',
-      10000000000000: '10t',
-      19939034457936: '19.9t',
-      9007199254740991: '9,010t' // Number.MAX_SAFE_INTEGER, 2^53-1
+      0: ['0', '0', '0', '0'],
+      0.1: ['0.1', '0.1', '0.1', '0.1'],
+      1: ['1', '1', '1', '1'],
+      1.3: ['1', '1.3', '1.3', '1.3'],
+      10: ['10', '10', '10', '10'],
+      11: ['10', '11', '11' ,'11'],
+      999: ['1k', '1k', '999', '999'],
+      1000: ['1k', '1k', '1k', '1k'],
+      1001: ['1k', '1k', '1k', '1.001k'],
+      1234: ['1k', '1.2k', '1.23k', '1.234k'],
+      9999: ['10k', '10k', '10k', '9.999k'],
+      10000: ['10k', '10k', '10k', '10k'],
+      10000.1: ['10k', '10k', '10k', '10k'],
+      10500: ['10k', '11k', '10.5k', '10.5k'],
+      10999: ['10k', '11k', '11k', '11k'],
+      11111: ['10k', '11k', '11.1k', '11.11k'],
+      111111: ['100k', '110k', '111k', '111.1k'],
+      1000000: ['1m', '1m', '1m', '1m'],
+      1111111: ['1m', '1.1m', '1.11m', '1.111m'],
+      1500000: ['2m', '1.5m', '1.5m', '1.5m'],
+      12345678: ['10m', '12m', '12.3m', '12.35m'],
+      1000000000: ['1b', '1b', '1b', '1b'],
+      1500000000: ['2b', '1.5b', '1.5b', '1.5b'],
+      9500000000: ['10b', '9.5b', '9.5b', '9.5b'],
+      9050000000: ['9b', '9.1b', '9.05b', '9.05b'],
+      10000000000: ['10b', '10b', '10b', '10b'],
+      10500000000: ['10b', '11b', '10.5b', '10.5b'],
+      1000000000000: ['1t', '1t', '1t', '1t'],
+      10000000000000: ['10t', '10t', '10t', '10t'],
+      19939034457936: ['20t', '20t', '19.9t', '19.94t'],
+      9007199254740991: ['9,000t', '9,000t', '9,010t', '9,007t']
     };
 
     // positive number tests
     Object.keys(tests).forEach(function(input) {
-      var expected = tests[input];
-      it(format('should convert %s to %s', input, expected), function() {
-        assert.equal( approximateNumber(input, options), expected);
+      input = parseFloat(input);
+      tests[input].forEach(function(expected, index) {
+        it(format('should convert %s to %s', input, expected), function() {
+          assert.equal( approximateNumber(input, { precision: index + 1 }), expected);
+        });
       });
     });
 
     // negative number tests - skip 0
     Object.keys(tests).slice(1).forEach(function(input) {
-      var expected = '-' +tests[input];
-      input = -input;
-      it(format('should convert %s to %s', input, expected), function () {
-        assert.equal(approximateNumber(input, options), expected);
+      tests[input].forEach(function(expected, index) {
+        expected = '-' + expected;
+        var precision = index + 1;
+        it(format('should convert "%s" with precision %s to "%s"', -input, precision, expected), function () {
+          assert.equal(approximateNumber(-input, { precision: precision }), expected);
+        });
       });
     });
   });
