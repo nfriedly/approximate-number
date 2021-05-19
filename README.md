@@ -69,7 +69,7 @@ Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-
 * **prefix** {String} Default = `''`. Optional string to prepend to the value, e.g. '$'.
 * **suffix** {String} Default = `''`. Optional string to append to the value, e.g. '%'.
 * **capital** {Boolean} Default = `false`. Set to true to use capital letters, e.g. 3.9M instead of 3.9m
-* **precision** {Number} Default = undefined. Number of significant digits. Must be greater than 0.
+* **precision** {Number} Default = undefined. Number of significant digits. Must be greater than 0. Use of this option forces rounding.
 
 ## V2.1 Changes
 * Added precision
