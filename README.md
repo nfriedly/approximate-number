@@ -1,6 +1,6 @@
 # Approximate Number
 
-Converts numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack
+Abbreviates numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack
 Overflow's reputation numbers. For example, 123456 becomes '123k'.
 
 Works in Node.js and in browsers.
@@ -31,6 +31,14 @@ console.log('The US national debt is %s.', approx(19939034457936, {
   round: true
 }));
 // > The US national debt is $20T.
+
+// Truncates/floors numbers by default
+approx(9999);
+// > '9.9k'
+
+// Set `round: true` to round instead of floor.
+approx(9999,{round: true});
+// > '10k'
 
 ```
 
