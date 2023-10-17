@@ -1,5 +1,9 @@
 # Approximate Number
 
+[![CI](https://github.com/nfriedly/approximate-number/actions/workflows/ci.yml/badge.svg)](https://github.com/nfriedly/approximate-number/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/approximate-number.svg)](https://www.npmjs.com/package/approximate-number)
+[![npm downloads](https://img.shields.io/npm/dm/approximate-number)](https://www.npmjs.com/package/approximate-number)
+
 Abbreviates numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack
 Overflow's reputation numbers. For example, 123456 becomes '123k'.
 
