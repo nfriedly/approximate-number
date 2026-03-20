@@ -1,7 +1,7 @@
-'use strict';
-var assert = require('assert'),
-  format = require('util').format,
-  approximateNumber = require('../lib/approximate-number.js');
+import assert from 'assert';
+import { format } from 'util';
+import { describe, it } from "@jest/globals";
+import approximateNumber from '../lib/approximate-number.js';
 
 describe('approximate-number', function() {
 

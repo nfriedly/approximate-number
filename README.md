@@ -53,8 +53,8 @@ approx(9999,{round: true});
 Install node module with: `npm install --save approximate-number`
 
 ```js
-var approx = require('approximate-number');
-approx(123456) // 123k
+import approx from 'approximate-number';
+approx(123456); // 123k
 ```
 
 ### Bower

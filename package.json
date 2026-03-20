@@ -1,6 +1,7 @@
 {
   "name": "approximate-number",
   "version": "2.1.1",
+  "type": "module",
   "main": "lib/approximate-number.js",
   "description": "Converts numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack Overflow's reputation numbers. For example, 123456 becomes '123k'.",
   "homepage": "https://github.com/nfriedly/approximate-number",
@@ -44,13 +45,16 @@
     "trillion"
   ],
   "devDependencies": {
-    "eslint": "^8.45.0",
-    "mocha": "^10.2.0"
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0",
+    "jest": "^30.3.0"
   },
   "scripts": {
     "test": "npm run lint && npm run test-unit",
-    "test-unit": "mocha",
-    "watch": "mocha --watch",
+    "test-unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "watch": "npm run test-unit -- --watch",
     "lint": "eslint .",
     "autofix": "eslint . --fix"
   }
