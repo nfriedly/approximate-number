@@ -11,6 +11,7 @@ Works in Node.js and in browsers.
 
 ```js
 import { approximateNumber as approx } from 'approximate-number';
+// to require() rather than import, use version 2.x
 
 console.log(approx(1234));
 //> 1.2k
@@ -56,6 +57,8 @@ Install node module with: `npm install --save approximate-number`
 import approximateNumber from 'approximate-number';
 approximateNumber(123456); // 123k
 ```
+
+For CommonJS projects, use version 2.x: run `npm install --save approximate-number@2` to install and then do `const approximateNumber = require("approximate-number");` to load the module.
 
 ### Browser usage without a package manager
 
