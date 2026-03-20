@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { it, describe } from "@jest/globals";
-import approximateNumber from '../lib/approximate-number.js';
+import { approximateNumber } from '../lib/approximate-number.js';
 
 describe('approximate-number', function() {
 

@@ -10,7 +10,7 @@ Overflow's reputation numbers. For example, 123456 becomes '123k'.
 Works in Node.js and in browsers.
 
 ```js
-var approx = require('approximate-number');
+import { approximateNumber as approx } from 'approximate-number';
 
 console.log(approx(1234));
 //> 1.2k
@@ -53,19 +53,8 @@ approx(9999,{round: true});
 Install node module with: `npm install --save approximate-number`
 
 ```js
-import approx from 'approximate-number';
-approx(123456); // 123k
-```
-
-### Bower
-
-Install with: `bower install approximate-number`
-
-```html
-<script src="/bower_components/approximate-number/lib/approximate-number.js"></script>
-<script>
-alert(approximateNumber(1234567890)); // 1.2b
-</script>
+import approximateNumber from 'approximate-number';
+approximateNumber(123456); // 123k
 ```
 
 ### Browser usage without a package manager
@@ -83,6 +72,9 @@ Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-
 * **capital** {Boolean} Default = `false`. Set to true to use capital letters, e.g. 3.9M instead of 3.9m
 * **precision** {Number} Default = undefined. Number of significant digits. Must be greater than 0. Use of this option forces rounding.
 
+## V3 Changes
+* Converted library from CommonJS to ESM
+
 ## V2.1 Changes
 * Added precision
 
@@ -96,7 +88,7 @@ Grab the latest [approximate-number.js](https://github.com/nfriedly/approximate-
 
 ## License
 
-Copyright (c) 2014 Nathan Friedly  
+Copyright (c) 2014-2026 Nathan Friedly  
 Licensed under the MIT license.
 
 
