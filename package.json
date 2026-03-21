@@ -3,6 +3,9 @@
   "version": "3.0.0",
   "type": "module",
   "main": "lib/approximate-number.js",
+  "files": [
+    "lib"
+  ],
   "description": "Converts numbers into a more human-friendly format, similar to `ls`'s `--human-readable` flag (`ls -lh`) or Stack Overflow's reputation numbers. For example, 123456 becomes '123k'.",
   "homepage": "https://github.com/nfriedly/approximate-number",
   "bugs": "https://github.com/nfriedly/approximate-number/issues",
